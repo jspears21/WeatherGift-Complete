@@ -9,4 +9,4 @@
 import Foundation
 
 let urlBase = "https://api.darksky.net/forecast/"
-let urlAPIKey = "da71ee97a5e7c3051476c414fba5676f" + "/"
+let urlAPIKey = "YOUR_DARKSKY_API_HERE" + "/"
