@@ -9,7 +9,7 @@
 import UIKit
 
 class PageVC: UIPageViewController {
-
+    
     var currentPage = 0
     var locationsArray = [WeatherLocation]()
     var pageControl: UIPageControl!
@@ -83,11 +83,10 @@ class PageVC: UIPageViewController {
     func configureAboutButton() {
         let aboutButtonText = "About..."
         let aboutButtonFont = UIFont.systemFont(ofSize: 15)
-        let fontAttributes = [NSAttributedStringKey.font: aboutButtonFont]
+        let fontAttributes = [NSAttributedString.Key.font: aboutButtonFont]
         aboutButtonSize = aboutButtonText.size(withAttributes: fontAttributes)
         aboutButtonSize.height += 16
         aboutButtonSize.width += 16
-        
         let safeHeight = view.frame.height - view.safeAreaInsets.bottom
         aboutButton = UIButton(frame: CGRect(x: 8, y: (safeHeight - 5) - aboutButtonSize.height, width: aboutButtonSize.width, height: aboutButtonSize.height))
         aboutButton.setTitle(aboutButtonText, for: .normal)
@@ -162,7 +161,7 @@ extension PageVC: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
             pageControl.currentPage = currentViewController.currentPage
         }
     }
-
+    
     @objc func pageControlPressed() {
         guard let currentViewController = self.viewControllers?[0] as? DetailVC else {return}
         currentPage = currentViewController.currentPage

@@ -17,7 +17,7 @@ class ListVC: UIViewController {
     
     var locationsArray = [WeatherLocation]()
     var currentPage = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -73,7 +73,8 @@ extension ListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     //MARK:- tableView Editing Functions
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             locationsArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)

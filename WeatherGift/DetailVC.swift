@@ -30,7 +30,7 @@ class DetailVC: UIViewController {
     var locationDetail: WeatherDetail!
     var locationManger: CLLocationManager!
     var currentLocation: CLLocation!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -93,20 +93,20 @@ extension DetailVC: CLLocationManagerDelegate {
         }
     }
     
-func showAlertToPrivacySettings(title: String, message: String) {
-    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    guard let settingsURL = URL(string: UIApplicationOpenSettingsURLString) else {
-        print("Something went wrong getting the UIApplicationOpenSettingsURLString")
-        return
+    func showAlertToPrivacySettings(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
+            print("Something went wrong getting the UIApplication.openSettingsURLString")
+            return
+        }
+        let settingsActions = UIAlertAction(title: "Settings", style: .default) { value in
+            UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(settingsActions)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
-    let settingsActions = UIAlertAction(title: "Settings", style: .default) { value in
-        UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
-    }
-    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-    alertController.addAction(settingsActions)
-    alertController.addAction(cancelAction)
-    present(alertController, animated: true, completion: nil)
-}
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         handleLocationAuthorizationStatus(status: status)
