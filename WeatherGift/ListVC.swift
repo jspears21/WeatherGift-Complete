@@ -2,8 +2,8 @@
 //  ListVC.swift
 //  WeatherGift
 //
-//  Created by John Gallaugher on 10/8/17.
-//  Copyright © 2017 Gallaugher. All rights reserved.
+//  Created by Jared Spears on 11/20/19.
+//  Copyright © 2019 Jared Spears. All rights reserved.
 //
 
 import UIKit
@@ -72,7 +72,6 @@ extension ListVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    //MARK:- tableView Editing Functions
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -89,7 +88,6 @@ extension ListVC: UITableViewDelegate, UITableViewDataSource {
         saveLocations()
     }
     
-    //MARK:- tableView methods to freeze the first cell
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return (indexPath.row != 0 ? true : false)
     }
@@ -107,7 +105,7 @@ extension ListVC: UITableViewDelegate, UITableViewDataSource {
         let latitude = place.coordinate.latitude
         let longitude = place.coordinate.longitude
         let newCoordinates = "\(latitude),\(longitude)"
-        let newWeatherLocation = WeatherLocation(name: place.name, coordinates: newCoordinates)
+        let newWeatherLocation = WeatherLocation(name: place.name!, coordinates: newCoordinates)
         locationsArray.append(newWeatherLocation)
         tableView.insertRows(at: [newIndexPath], with: .automatic)
         saveLocations()
@@ -116,23 +114,19 @@ extension ListVC: UITableViewDelegate, UITableViewDataSource {
 
 extension ListVC: GMSAutocompleteViewControllerDelegate {
     
-    // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         dismiss(animated: true, completion: nil)
         updateTable(place: place)
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        // TODO: handle the error.
         print("Error: ", error.localizedDescription)
     }
     
-    // User canceled the operation.
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
         dismiss(animated: true, completion: nil)
     }
     
-    // Turn the network activity indicator on and off again.
     func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }

@@ -2,8 +2,8 @@
 //  DetailVC.swift
 //  WeatherGift
 //
-//  Created by John Gallaugher on 10/8/17.
-//  Copyright © 2017 Gallaugher. All rights reserved.
+//  Created by Jared Spears on 11/20/19.
+//  Copyright © 2019 Jared Spears. All rights reserved.
 //
 
 import UIKit

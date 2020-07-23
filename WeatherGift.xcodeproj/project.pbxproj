@@ -15,7 +15,6 @@
 		3E68D77C1F8AB17B006C6019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E68D77B1F8AB17B006C6019 /* Assets.xcassets */; };
 		3E68D77F1F8AB17B006C6019 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E68D77D1F8AB17B006C6019 /* LaunchScreen.storyboard */; };
 		3E68D7871F8AB231006C6019 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E68D7861F8AB231006C6019 /* DetailVC.swift */; };
-		3E77BAF02114FEBA0091A875 /* READ_ME in Resources */ = {isa = PBXBuildFile; fileRef = 3E77BAEF2114FEBA0091A875 /* READ_ME */; };
 		3E8961F41F8AC1000093D49F /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8961F31F8AC1000093D49F /* ListVC.swift */; };
 		3E8CD9B31FA12C7200E51A97 /* DayWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CD9B21FA12C7200E51A97 /* DayWeatherCell.swift */; };
 		3EA717BC1FA67BBF0031D521 /* HourlyWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717BB1FA67BBF0031D521 /* HourlyWeatherCell.swift */; };
@@ -37,7 +36,6 @@
 		3E68D77E1F8AB17B006C6019 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E68D7801F8AB17B006C6019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E68D7861F8AB231006C6019 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
-		3E77BAEF2114FEBA0091A875 /* READ_ME */ = {isa = PBXFileReference; lastKnownFileType = text; path = READ_ME; sourceTree = "<group>"; };
 		3E8961F31F8AC1000093D49F /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		3E8CD9B21FA12C7200E51A97 /* DayWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherCell.swift; sourceTree = "<group>"; };
 		3EA717BB1FA67BBF0031D521 /* HourlyWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCell.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 		3E68D7731F8AB17B006C6019 /* WeatherGift */ = {
 			isa = PBXGroup;
 			children = (
-				3E77BAEF2114FEBA0091A875 /* READ_ME */,
 				3E68D7741F8AB17B006C6019 /* AppDelegate.swift */,
 				3EF390B11FAB718700114EB5 /* WeatherLocation.swift */,
 				3EF8C5F91F92F4AD006CB1A6 /* WeatherDetail.swift */,
@@ -180,7 +177,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E77BAF02114FEBA0091A875 /* READ_ME in Resources */,
 				3E68D77F1F8AB17B006C6019 /* LaunchScreen.storyboard in Resources */,
 				3E68D77C1F8AB17B006C6019 /* Assets.xcassets in Resources */,
 				3E68D77A1F8AB17B006C6019 /* Main.storyboard in Resources */,
@@ -196,7 +192,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WeatherGift/Pods-WeatherGift-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherGift/Pods-WeatherGift-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
@@ -209,7 +205,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeatherGift/Pods-WeatherGift-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherGift/Pods-WeatherGift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		94C21AA42B1236A17D4F4526 /* [CP] Check Pods Manifest.lock */ = {
@@ -236,7 +232,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WeatherGift/Pods-WeatherGift-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherGift/Pods-WeatherGift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -247,7 +243,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeatherGift/Pods-WeatherGift-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherGift/Pods-WeatherGift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -406,10 +402,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9937BJYLPH;
+				DEVELOPMENT_TEAM = TSM35655RE;
 				INFOPLIST_FILE = WeatherGift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gallaugher.WeatherGift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spears.WeatherGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -422,10 +418,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9937BJYLPH;
+				DEVELOPMENT_TEAM = TSM35655RE;
 				INFOPLIST_FILE = WeatherGift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gallaugher.WeatherGift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spears.WeatherGift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -2,8 +2,8 @@
 //  PageVC.swift
 //  WeatherGift
 //
-//  Created by John Gallaugher on 10/8/17.
-//  Copyright © 2017 Gallaugher. All rights reserved.
+//  Created by Jared Spears on 11/20/19.
+//  Copyright © 2019 Jared Spears. All rights reserved.
 //
 
 import UIKit
@@ -50,7 +50,6 @@ class PageVC: UIPageViewController {
         }
     }
     
-    //MARK: - UI Configuration Methods
     func configurePageControl() {
         let largestWidth = max(barButtonWidth, aboutButton.frame.width)
         let pageControlHeight: CGFloat = barButtonWidth
@@ -96,7 +95,6 @@ class PageVC: UIPageViewController {
         view.addSubview(aboutButton)
     }
     
-    //MARK:- Segues
     @objc func segueToAboutVC(){
         performSegue(withIdentifier: "ToAboutVC", sender: nil)
     }
@@ -122,7 +120,6 @@ class PageVC: UIPageViewController {
     }
     
     
-    //MARK: - Create View Controller for UIPageViewController
     func createDetailVC(forPage page: Int) -> DetailVC {
         currentPage = min(max(0, page), locationsArray.count - 1)
         

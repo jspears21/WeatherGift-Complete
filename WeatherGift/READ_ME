@@ -1,9 +1,0 @@
-
-The WeatherGift project requires several steps to run:
-1 - install the cocoapods (one of the video lessons in the chapter explains how to do this). There is a podfile in this project, but it would be wise to visit the github page for each pod and update any lines in the podfile that might need a change to ensure that they are installing the latest version.
-2 - A GooglePlaces API Key - you can get this free from Google. Instructions at: https://developers.google.com/places/web-service/get-api-key
-3 - Once you get your own Google API key, open AppDelegate.swift and replace the String "YOUR_GOOGLE_PLACES_API_HERE" with your own Google API key.
-4 - A DarkSky API Key - you can get this free from Dark Sky. Instructions at: https://darksky.net/dev
-5 - Once you get your own DarkSky API Key, open the Constants.swift file and replace the String "YOUR_DARKSKY_API_HERE" wth your own DarkSky API key.
-6 - Remember that since this project uses Cocoapods, you'll need to  open the project with the file: WeatherGift.xcworkspace, NOT the .xcodeproj file.
-7- Also note that this project has icon and small-icon folders containing generic weather glyphs that I've created. You can use these for free in your project. You can also find these icons at: http://bit.ly/WeatherIcons
